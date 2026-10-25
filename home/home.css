@@ -246,12 +246,12 @@
 
 /* slider ------------------------*/
 
-.swiper {
+.mySwiper {
   width: 100%;
   height: 450px;
 }
 
-.swiper-slide {
+.mySwiper .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #444;
@@ -260,7 +260,7 @@
   align-items: center;
 }
 
-.swiper-slide img {
+.mySwiper .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
@@ -270,11 +270,25 @@
 
 .swiper-pagination {
   background: none;
+  z-index: 20;
+}
+
+.mySwiper .swiper-pagination {
+  bottom: 12px;
 }
 
 @media (max-width: 600px) {
-  .swiper {
+  .mySwiper {
     height: 250px;
+  }
+
+  .mySwiper .swiper-pagination {
+    bottom: 8px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
   }
 }
 
@@ -787,7 +801,7 @@
 
     .swiper-pro {
       width: 100%;
-      padding: 0;
+      padding: 0 0 32px;
 
       .swiper-slide {
         background-position: center;
@@ -797,7 +811,7 @@
         padding: 10px;
         border-radius: 20px;
         overflow: visible;
-        background: var(--pale-color);
+        background: transparent;
       }
 
       .img-box {
@@ -808,7 +822,10 @@
 
         img {
           display: block;
+          width: 100%;
+          height: 100%;
           object-fit: cover;
+          object-position: top;
           border-radius: 20px;
           cursor: pointer;
           transition: all 0.3s ease-in-out;
@@ -826,6 +843,7 @@
         font-size: 18px;
         font-weight: 600;
         color: var(--icon-color);
+        text-align: center;
       }
 
       p {
@@ -834,6 +852,7 @@
         font-size: 14px;
         font-weight: 500;
         color: var(--icon-color);
+        text-align: center;
       }
 
       .btn {
@@ -848,15 +867,19 @@
           align-items: center;
           justify-content: center;
           gap: 10px;
-          font-size: 16px;
-          font-weight: 500;
-          padding: 10px 10px;
+          padding: 10px;
+          font-size: 14px;
           border-radius: 10px;
           color: var(--white-color);
           background: var(--blue-color);
           font-family: var(--secondary-font);
           border: none;
           cursor: pointer;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            opacity: 0.8;
+          }
         }
       }
     }
