@@ -17,25 +17,26 @@
     <header class="header">
         <div class="container">
 
-            <div class="menu-nav">
+            <div class="menu-nav" role="button" tabindex="0" aria-label="Open menu" aria-controls="sideMenu"
+                aria-expanded="false">
                 <i class="bi bi-list"></i>
             </div>
 
-            <div class="logo">
-                <img src="../asset/logo.jpg">
+            <a class="logo" href="home.html">
+                <img src="../asset/logo.jpg" alt="GOGO International School">
                 <div class="txt">
                     <h1 id="kh">សាលារៀន ហ្កូហ្កូ អន្តរជាតិ</h1>
                     <h1>gogo international school</h1>
                 </div>
-            </div>
+            </a>
 
             <div class="menu">
                 <ul>
-                    <li><a href="" id="active">home</a></li>
-                    <li><a href="">class</a></li>
-                    <li><a href="">program</a></li>
-                    <li><a href="">about us</a></li>
-                    <li><a href="">contact us</a></li>
+                    <li><a href="home.html" id="active">home</a></li>
+                    <li><a href="class/class.html">class</a></li>
+                    <li><a href="program/program.html">program</a></li>
+                    <li><a href="about/about.html">about us</a></li>
+                    <li><a href="contact/contact.html">contact us</a></li>
                 </ul>
             </div>
 
@@ -51,6 +52,26 @@
             </div>
         </div>
     </header>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <aside class="side-menu" id="sideMenu" aria-hidden="true">
+        <div class="side-menu-header">
+            <a class="side-menu-brand" href="home.html">
+                <img src="../asset/logo.jpg" alt="GOGO International School">
+                <!-- <span>gogo international school</span> -->
+            </a>
+            <i class="bi bi-x-square side-menu-close" id="sideMenuClose"></i>
+        </div>
+
+        <ul class="side-menu-list">
+            <li><a href="home.html" id="active">home</a></li>
+            <li><a href="class/class.html">class</a></li>
+            <li><a href="program/program.html">program</a></li>
+            <li><a href="about/about.html">about us</a></li>
+            <li><a href="contact/contact.html">contact us</a></li>
+        </ul>
+    </aside>
 
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
@@ -332,6 +353,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
     <script src="home.js"></script>
+    <script src="menu.js"></script>
 </body>
 
 </html>
